@@ -1,0 +1,76 @@
+/ ========== Left Sidebar Start ==========
+.left.side-menu
+  .sidebar-inner.slimscrollleft
+    .user-details
+      .pull-left
+        %img.thumb-md.img-circle{:alt => "", :src => "images/users/avatar-1.jpg"}/
+      .user-info
+        .dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#"}
+            John Doe
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "javascript:void(0)"}
+                %i.md.md-face-unlock
+                Profile
+                .ripple-wrapper
+            %li
+              %a{:href => "javascript:void(0)"}
+                %i.md.md-settings
+                Settings
+            %li
+              %a{:href => "javascript:void(0)"}
+                %i.md.md-lock
+                Lock screen
+            %li
+              %a{:href => "javascript:void(0)"}
+                %i.md.md-settings-power
+                Logout
+        %p.text-muted.m-0 Administrator
+    / - Divider
+    #sidebar-menu
+      %ul
+        %li
+          %a.waves-effect.active{:href => "/"}
+            %i.md.md-home
+            %span Inicio
+        %li.has_sub
+          %a.waves-effect{:href => "#"}
+            %i.md.md-pages
+            %span Pages
+            %span.pull-right
+              %i.md.md-add
+          %ul.list-unstyled
+            %li
+              %a{:href => "profile.html"} Profile
+            %li
+              %a{:href => "timeline.html"} Timeline
+        %li.has_sub
+          %a.waves-effect{:href => "javascript:void(0);"}
+            %i.md.md-share
+            %span Multi Level
+            %span.pull-right
+              %i.md.md-add
+          %ul
+            %li.has_sub
+              %a.waves-effect{:href => "javascript:void(0);"}
+                %span Menu Level 1.1
+                %span.pull-right
+                  %i.md.md-add
+              %ul{:style => ""}
+                %li
+                  %a{:href => "javascript:void(0);"}
+                    %span Menu Level 2.1
+                %li
+                  %a{:href => "javascript:void(0);"}
+                    %span Menu Level 2.2
+                %li
+                  %a{:href => "javascript:void(0);"}
+                    %span Menu Level 2.3
+            %li
+              %a{:href => "javascript:void(0);"}
+                %span Menu Level 1.2
+      .clearfix
+    .clearfix
+/ Left Sidebar End

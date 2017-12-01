@@ -1,0 +1,85 @@
+/ Top Bar Start
+.topbar
+  / LOGO
+  .topbar-left
+    .text-center
+      %a.logo{:href => "index.html"}
+        %i.md.md-terrain
+        %span Moltran
+  / Button mobile view to collapse sidebar menu
+  .navbar.navbar-default{:role => "navigation"}
+    .container
+      %div
+        .pull-left
+          %button.button-menu-mobile.open-left
+            %i.fa.fa-bars
+          %span.clearfix
+        %ul.nav.navbar-nav.navbar-right.pull-right
+          %li.dropdown.hidden-xs
+            %a.dropdown-toggle.waves-effect.waves-light{"aria-expanded" => "true", "data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+              %i.md.md-notifications
+              %span.badge.badge-xs.badge-danger 3
+            %ul.dropdown-menu.dropdown-menu-lg
+              %li.text-center.notifi-title Notification
+              %li.list-group
+                / list item
+                %a.list-group-item{:href => "javascript:void(0);"}
+                  .media
+                    .pull-left
+                      %em.fa.fa-user-plus.fa-2x.text-info
+                    .media-body.clearfix
+                      .media-heading New user registered
+                      %p.m-0
+                        %small You have 10 unread messages
+                / list item
+                %a.list-group-item{:href => "javascript:void(0);"}
+                  .media
+                    .pull-left
+                      %em.fa.fa-diamond.fa-2x.text-primary
+                    .media-body.clearfix
+                      .media-heading New settings
+                      %p.m-0
+                        %small There are new settings available
+                / list item
+                %a.list-group-item{:href => "javascript:void(0);"}
+                  .media
+                    .pull-left
+                      %em.fa.fa-bell-o.fa-2x.text-danger
+                    .media-body.clearfix
+                      .media-heading Updates
+                      %p.m-0
+                        %small
+                          There are
+                          %span.text-primary 2
+                          new updates available
+                / last list item
+                %a.list-group-item{:href => "javascript:void(0);"}
+                  %small See all notifications
+          %li.hidden-xs
+            %a#btn-fullscreen.waves-effect.waves-light{:href => "#"}
+              %i.md.md-crop-free
+          %li.hidden-xs
+            %a.right-bar-toggle.waves-effect.waves-light{:href => "#"}
+              %i.md.md-chat
+          %li.dropdown
+            %a.dropdown-toggle.profile{"aria-expanded" => "true", "data-toggle" => "dropdown", :href => ""}
+              %img.img-circle{:alt => "user-img", :src => "images/avatar-1.jpg"}/
+            %ul.dropdown-menu
+              %li
+                %a{:href => "javascript:void(0)"}
+                  %i.md.md-face-unlock
+                  Profile
+              %li
+                %a{:href => "javascript:void(0)"}
+                  %i.md.md-settings
+                  Settings
+              %li
+                %a{:href => "javascript:void(0)"}
+                  %i.md.md-lock
+                  Lock screen
+              %li
+                %a{:href => "javascript:void(0)"}
+                  %i.md.md-settings-power
+                  Logout
+      / /.nav-collapse
+/ Top Bar End
