@@ -14,5 +14,10 @@
 //= require turbolinks
 //= require jquery3
 //= require popper
-//= require bootstrap-sprockets
-//= require_tree .
+// require bootstrap-sprockets
+//= require moltran/jdep.js
+//= require moltran/assets.js
+//= require moltran/page.js
+//= require initializer/initializer.js
+//
+// require_tree .
