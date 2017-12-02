@@ -1,5 +1,4 @@
 class Cliente < Usuario
-  before_create :set_rol
 
   private
 
