@@ -8,6 +8,7 @@ class Admin::MonitoristasController < ApplicationController
   end
 
   def edit
+    @monitorista = Monitorista.find_by_id(params[:id])
   end
 
   def create

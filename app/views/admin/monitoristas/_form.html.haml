@@ -1,0 +1,10 @@
+= simple_form_for([:admin, @monitorista]) do |f|
+  = f.input :nombre
+  = f.input :username
+  = f.input :email, placeholder: 'monitorista@mass.com'
+  - unless @monitorista.persisted?
+    = f.input :password, hint: 'Longitud minima 8 caracteres'
+    = f.input :password_confirmation, hint: 'Confirmar contraseña'
+  = f.input :telefono, placeholder: '951 123 12 23'
+  = f.button :submit, name_button, class: 'btn-primary pull-right'
+

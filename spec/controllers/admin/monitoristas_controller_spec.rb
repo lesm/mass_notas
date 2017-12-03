@@ -7,8 +7,7 @@ RSpec.describe Admin::MonitoristasController, type: :controller do
       nombre: 'juan',
       username: 'juanito',
       email: 'juan@mass.com',
-      #password: 'secreto',
-      #password_confirmation: 'secreto',
+      password: 'secreto',
       telefono: '951 123 23 12'
     }
   }
@@ -18,8 +17,7 @@ RSpec.describe Admin::MonitoristasController, type: :controller do
       nombre: nil,
       username: 'juanito',
       email: 'juanmass.com',
-      #password: 'secreto',
-      #password_confirmation: 'secreto',
+      password: 'secreto',
       telefono: '951 123 23 12'
     }
   }
@@ -41,9 +39,10 @@ RSpec.describe Admin::MonitoristasController, type: :controller do
   end
 
   describe "GET #edit" do
-    xit "returns http success" do
-      get :edit
-      expect(response).to have_http_status(:success)
+    it "assigns the requested monitorista as @monitorista" do
+      monitorista = Monitorista.create! valid_attributes
+      get :edit, params: { id: monitorista.id }, session: valid_session
+      expect(assigns(:monitorista)).to eq monitorista
     end
   end
 

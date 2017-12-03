@@ -5,12 +5,4 @@
         %h3.panel-title
           Nuevo Monitorista
       .panel-body
-        = simple_form_for([:admin, @monitorista]) do |f|
-          = f.input :nombre
-          = f.input :username
-          = f.input :email, placeholder: 'monitorista@mass.com'
-          = f.input :password, hint: 'Longitud minima 8 caracteres'
-          = f.input :password_confirmation, hint: 'Confirmar contraseña'
-          = f.input :telefono, placeholder: '951 123 12 23'
-          = f.button :submit, class: 'btn-primary pull-right'
-
+        = render 'form', name_button: 'Crear Monitorista'
