@@ -136,6 +136,6 @@ var page = function () {
   $.Portlet.init();
 }
 
-$(document).on('ready', function () {
+$(document).on('turbolinks:load', function () {
   page()
 })

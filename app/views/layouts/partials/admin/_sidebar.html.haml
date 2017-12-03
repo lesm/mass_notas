@@ -32,10 +32,9 @@
     #sidebar-menu
       %ul
         %li
-          %a.waves-effect.active{:href => "/"}
-            = link_to admin_dashboard_index_path do
-              %i.md.md-home
-              %span Inicio
+          = link_to admin_dashboard_index_path do
+            %i.md.md-home
+            %span Inicio
         %li.has_sub
           %a.waves-effect{:href => "#"}
             %i.md.md-pages
@@ -44,7 +43,7 @@
               %i.md.md-add
           %ul.list-unstyled
             %li
-              %a{:href => "profile.html"} Registrar
+              = link_to 'Registrar', new_admin_monitorista_path
             %li
               %a{:href => "timeline.html"} Ver
         %li.has_sub
