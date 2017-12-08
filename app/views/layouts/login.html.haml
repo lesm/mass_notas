@@ -7,17 +7,8 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body.fixed-left
-    / Begin page
-    #wrapper
-      = render "layouts/partials/topbar"
-      = render "layouts/partials/sidebar"
-      .content-page
-        / Start content
-        .content
-          .container
-            = yield
-      = render "layouts/partials/contact"
+  %body
+    = yield
     :javascript
       var resizefunc = []
 

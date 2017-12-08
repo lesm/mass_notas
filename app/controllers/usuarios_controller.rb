@@ -1,4 +1,6 @@
 class UsuariosController < ApplicationController
+  layout 'login'
+
   def login
   end
 
@@ -8,9 +10,13 @@ class UsuariosController < ApplicationController
       session[:usuario_id] = usuario.id
       redirect_to root_path
     else
-      flash.now[:error] = 'Usuario o contraseña no válidos'
-      render :login
+      flash[:error] = 'Usuario o contraseña no válidos'
+      redirect_to login_path
     end
   end
 
+  def logout
+    session[:usuario_id] = nil
+    redirect_to login_path
+  end
 end

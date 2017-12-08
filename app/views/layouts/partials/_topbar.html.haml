@@ -78,8 +78,9 @@
                   %i.md.md-lock
                   Lock screen
               %li
-                %a{:href => "javascript:void(0)"}
-                  %i.md.md-settings-power
-                  Logout
+                - if usuario_actual
+                  = link_to logout_path, method: :delete do
+                    %i.md.md-settings-power
+                    Cerrar Sesión
       / /.nav-collapse
 / Top Bar End

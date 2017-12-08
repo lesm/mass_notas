@@ -1,2 +1,14 @@
-%h1 Usuarios#login
-%p Find me in app/views/usuarios/login.html.haml
+.wrapper-page
+  .panel.panel-color.panel-primary.panel-pages
+    .panel-heading.bg-img
+      .bg-overlay
+      %h3.text-center.m-t-10.text-white
+        Iniciar Sesión
+    .panel-body
+      = flash[:error] if flash[:error]
+      = simple_form_for(Usuario.new, url: usuario_authenticate_path, method: :post, input_html: { class: '.m-t-20 form-horizontal' } ) do |f|
+        = f.input :username, label: false, placeholder: 'Usuario', input_html: { class: 'input-lg' }
+        = f.input :password, label: false, placeholder: 'Contraseña', input_html: {  class: 'input-lg' }
+        .text-center
+          = f.button :submit, class: 'btn btn-primary'
+
