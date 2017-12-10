@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   post 'usuarios/authenticate', to: 'usuarios#authenticate', as: 'usuario_authenticate'
   delete 'logout', to: 'usuarios#logout', as: 'logout'
 
+  get 'admin/index'
   namespace :admin do
-    get 'dashboard/index'
     resources :monitoristas
   end
 
